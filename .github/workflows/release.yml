@@ -6,19 +6,16 @@ on:
       - 'v*'  # Se ejecuta cuando se hace push de un tag que comience con "v", por ejemplo, v1.0.0
 
 permissions:
-  contents: read
-  releases: write
+  contents: write  # Otorga permisos necesarios para crear releases
 
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
 
     steps:
-      # Paso 1: Clonar el repositorio
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      # Paso 2: Validar que el archivo Mov/Movment.hpp exista
       - name: Validate Movment.hpp exists
         run: |
           if [ ! -f "Mov/Movment.hpp" ]; then
@@ -26,7 +23,6 @@ jobs:
             exit 1
           fi
 
-      # Paso 3: Crear un archivo ZIP con Movment.hpp
       - name: Create zip with Movment.hpp
         run: |
           set -e
@@ -44,7 +40,7 @@ jobs:
           files: release/Movment.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+
       - name: Cleanup
         if: always()
         run: rm -rf release
