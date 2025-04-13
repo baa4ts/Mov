@@ -1,0 +1,48 @@
+name: Release Movment.hpp
+
+on:
+  push:
+    tags:
+      - 'v*'  # Se ejecuta solo cuando se pushea un tag como v1.0.0
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Paso 1: Clonar el repositorio
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      # Paso 2: Validar la existencia del archivo antes de crear el ZIP
+      - name: Validate Movment.hpp exists
+        run: |
+          if [ ! -f "Mov/Movment.hpp" ]; then
+            echo "Error: Mov/Movment.hpp no existe"
+            exit 1
+          fi
+
+      # Paso 3: Crear un archivo ZIP con Movment.hpp
+      - name: Create zip with Movment.hpp
+        run: |
+          set -e
+          rm -rf release
+          mkdir -p release
+          cp Mov/Movment.hpp release/
+          cd release
+          zip Movment.zip Movment.hpp
+
+      # Paso 4: Crear un release en GitHub
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          files: release/Movment.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Paso 5: Limpiar artefactos temporales
+      - name: Cleanup
+        if: always()
+        run: rm -rf release
