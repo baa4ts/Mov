@@ -1,47 +1,14 @@
-# Movment Library
+# Movment.hpp
 
-Una pequeña librería en C++ para controlar el movimiento del cursor en sistemas Windows.
+Este archivo contiene clases y funciones que permiten manipular ventanas y controlar el cursor en entornos Windows. Se incluyen implementaciones de algoritmos y funciones para:
 
-## Características
+- **Algoritmos**: Implementación del algoritmo A* para generar rutas en la pantalla.
+- **Vetana**: Gestión de ventanas, incluyendo funciones para mover, cambiar el estado y redimensionar.
+- **Maus**: Manejo del cursor, permitiendo obtener la posición actual, mover el cursor a ubicaciones específicas o aleatorias, y recorrer rutas calculadas por el algoritmo A*.
 
-- **Obtener posición actual:** Recupera las coordenadas actuales del cursor.  
-- **Posición aleatoria:** Genera coordenadas aleatorias dentro de la pantalla.  
-- **Ruta con A\*:** Calcula una ruta entre dos puntos utilizando el algoritmo A\*.  
-- **Mover cursor:** Mueve el cursor a lo largo de la ruta o a una posición fija.
+La documentación de cada función y estructura se ha realizado usando el estilo Doxygen, facilitando la generación de documentación automática.
 
-## Requisitos
-
-- **Sistema operativo:** Windows (uso de la API de Windows)
-- **Compilador:** C++11 o superior
-
-## Uso Rápido
-
-Incluye el archivo `movment.hpp` en tu proyecto y utiliza la clase `Mouse`:
-
-```cpp
-#include "movment.hpp"
-#include <iostream>
-
-int main() {
-    Movment::Mouse mouse;
-    
-    // Obtener y mostrar la posición actual del cursor
-    auto [x, y] = mouse.PosicionActualCursor();
-    std::cout << "Posición actual: (" << x << ", " << y << ")\n";
-    
-    // Mover el cursor a una posición aleatoria de la pantalla
-    mouse.MoverAleatoriamenteCursor();
-    
-    // Mover el cursor a (100, 100)
-    if (mouse.MoverCursor(100, 100)) {
-        std::cout << "Cursor movido a (100, 100).\n";
-    } else {
-        std::cout << "Error al mover el cursor.\n";
-    }
-    
-    return 0;
-}
-```
+> La documentacion esta incluida en la carpeta docs
 
 ## Licencia
 
