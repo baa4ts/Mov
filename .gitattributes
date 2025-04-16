@@ -1,0 +1,9 @@
+* text=auto
+
+# Forzar archivos JS y CSS a LF
+*.js text eol=lf
+*.css text eol=lf
+
+# Forzar archivos LaTeX a LF también
+*.tex text eol=lf
+*.sty text eol=lf

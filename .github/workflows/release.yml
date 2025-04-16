@@ -25,19 +25,26 @@ jobs:
 
       - name: Create zip with Movment.hpp, docs and meta
         run: |
-            set -e
-            rm -rf release
-            mkdir -p release
-            # Copia el archivo principal
-            cp Mov/Movment.hpp release/
-            # Copia la carpeta /docs (se asume que está en la raíz del repositorio)
+          set -e
+          rm -rf release
+          mkdir -p release
+          # Copia el archivo principal
+          cp Mov/Movment.hpp release/
+          # Copia la carpeta "docs" si existe
+          if [ -d "docs" ]; then
             cp -r docs release/
-            # Copia el archivo meta (asegúrate de ajustar la ruta si es necesario)
+          else
+            echo "La carpeta docs no existe. Se omite su copia."
+          fi
+          # Copia el archivo "meta" si existe (ajusta la ruta si es necesario)
+          if [ -f "meta" ]; then
             cp meta release/
-            cd release
-            # Crea el zip incluyendo el archivo Movment.hpp, la carpeta docs y el archivo meta
-            zip -r Movment.zip Movment.hpp docs meta
-        
+          else
+            echo "El archivo meta no existe. Se omite su copia."
+          fi
+          cd release
+          # Crea el ZIP; si docs o meta no existen, zip los omitirá
+          zip -r Movment.zip Movment.hpp docs meta
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2.2.1

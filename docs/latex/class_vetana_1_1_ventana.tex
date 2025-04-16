@@ -1,0 +1,104 @@
+\doxysection{Vetana\+::Ventana Class Reference}
+\hypertarget{class_vetana_1_1_ventana}{}\label{class_vetana_1_1_ventana}\index{Vetana::Ventana@{Vetana::Ventana}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_vetana_1_1_ventana_a5963889e0288c023817b6e726ddffd4e}\label{class_vetana_1_1_ventana_a5963889e0288c023817b6e726ddffd4e} 
+{\bfseries Ventana} (DWORD PID, bool \&Confirmador, bool Acoples=true)
+\item 
+bool \mbox{\hyperlink{class_vetana_1_1_ventana_a1226c6b75d673d6ef0caaa276c5297f8}{Ventana\+Cambiar\+Estado}} (bool Minimizar)
+\item 
+bool \mbox{\hyperlink{class_vetana_1_1_ventana_a9e46ceff05fc6dcf983c541ded0ef337}{Ventana\+Restaurar}} ()
+\item 
+bool \mbox{\hyperlink{class_vetana_1_1_ventana_a35342411d9afb7986134fae17f59c1f0}{Ventana\+Mover}} (int X, int Y)
+\item 
+bool \mbox{\hyperlink{class_vetana_1_1_ventana_ade70b160cb5bc78a790c25b76935f9a9}{Ventana\+Redimensionar}} (int X, int Y)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_vetana_1_1_ventana_a54c9ed1f478ccc29d134565500e1d86a}{Ventana\+Minimos}} ()
+\item 
+static std\+::string \mbox{\hyperlink{class_vetana_1_1_ventana_a36f2a49516690dbc5be39366d03e0045}{Ventana\+Maximos}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vetana_1_1_ventana_a1226c6b75d673d6ef0caaa276c5297f8}\index{Vetana::Ventana@{Vetana::Ventana}!VentanaCambiarEstado@{VentanaCambiarEstado}}
+\index{VentanaCambiarEstado@{VentanaCambiarEstado}!Vetana::Ventana@{Vetana::Ventana}}
+\doxysubsubsection{\texorpdfstring{VentanaCambiarEstado()}{VentanaCambiarEstado()}}
+{\footnotesize\ttfamily \label{class_vetana_1_1_ventana_a1226c6b75d673d6ef0caaa276c5297f8} 
+bool Vetana\+::\+Ventana\+::\+Ventana\+Cambiar\+Estado (\begin{DoxyParamCaption}\item[{bool}]{Minimizar}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cambia el estado de la ventana a minimizar o maximizar. 
+\begin{DoxyParams}{Parameters}
+{\em Minimizar} & Si es verdadero, minimiza; de lo contrario, maximiza. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadero si tuvo éxito, falso si falló. 
+\end{DoxyReturn}
+\Hypertarget{class_vetana_1_1_ventana_a36f2a49516690dbc5be39366d03e0045}\index{Vetana::Ventana@{Vetana::Ventana}!VentanaMaximos@{VentanaMaximos}}
+\index{VentanaMaximos@{VentanaMaximos}!Vetana::Ventana@{Vetana::Ventana}}
+\doxysubsubsection{\texorpdfstring{VentanaMaximos()}{VentanaMaximos()}}
+{\footnotesize\ttfamily \label{class_vetana_1_1_ventana_a36f2a49516690dbc5be39366d03e0045} 
+static std\+::string Vetana\+::\+Ventana\+::\+Ventana\+Maximos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Devuelve los valores máximos permitidos para el tamaño de una ventana. \begin{DoxyReturn}{Returns}
+Cadena con dimensiones máximas en X y Y. 
+\end{DoxyReturn}
+\Hypertarget{class_vetana_1_1_ventana_a54c9ed1f478ccc29d134565500e1d86a}\index{Vetana::Ventana@{Vetana::Ventana}!VentanaMinimos@{VentanaMinimos}}
+\index{VentanaMinimos@{VentanaMinimos}!Vetana::Ventana@{Vetana::Ventana}}
+\doxysubsubsection{\texorpdfstring{VentanaMinimos()}{VentanaMinimos()}}
+{\footnotesize\ttfamily \label{class_vetana_1_1_ventana_a54c9ed1f478ccc29d134565500e1d86a} 
+static std\+::string Vetana\+::\+Ventana\+::\+Ventana\+Minimos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Devuelve los valores mínimos permitidos para el tamaño de una ventana. \begin{DoxyReturn}{Returns}
+Cadena con dimensiones mínimas en X y Y. 
+\end{DoxyReturn}
+\Hypertarget{class_vetana_1_1_ventana_a35342411d9afb7986134fae17f59c1f0}\index{Vetana::Ventana@{Vetana::Ventana}!VentanaMover@{VentanaMover}}
+\index{VentanaMover@{VentanaMover}!Vetana::Ventana@{Vetana::Ventana}}
+\doxysubsubsection{\texorpdfstring{VentanaMover()}{VentanaMover()}}
+{\footnotesize\ttfamily \label{class_vetana_1_1_ventana_a35342411d9afb7986134fae17f59c1f0} 
+bool Vetana\+::\+Ventana\+::\+Ventana\+Mover (\begin{DoxyParamCaption}\item[{int}]{X}{, }\item[{int}]{Y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Mueve la ventana a una nueva posición (X, Y), dentro de los límites del monitor. 
+\begin{DoxyParams}{Parameters}
+{\em X} & Nueva coordenada X. \\
+\hline
+{\em Y} & Nueva coordenada Y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadero si el movimiento fue exitoso. 
+\end{DoxyReturn}
+\Hypertarget{class_vetana_1_1_ventana_ade70b160cb5bc78a790c25b76935f9a9}\index{Vetana::Ventana@{Vetana::Ventana}!VentanaRedimensionar@{VentanaRedimensionar}}
+\index{VentanaRedimensionar@{VentanaRedimensionar}!Vetana::Ventana@{Vetana::Ventana}}
+\doxysubsubsection{\texorpdfstring{VentanaRedimensionar()}{VentanaRedimensionar()}}
+{\footnotesize\ttfamily \label{class_vetana_1_1_ventana_ade70b160cb5bc78a790c25b76935f9a9} 
+bool Vetana\+::\+Ventana\+::\+Ventana\+Redimensionar (\begin{DoxyParamCaption}\item[{int}]{X}{, }\item[{int}]{Y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cambia el tamaño de la ventana según las dimensiones proporcionadas, respetando los límites del monitor. 
+\begin{DoxyParams}{Parameters}
+{\em X} & Nueva anchura. \\
+\hline
+{\em Y} & Nueva altura. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadero si el cambio de tamaño fue exitoso. 
+\end{DoxyReturn}
+\Hypertarget{class_vetana_1_1_ventana_a9e46ceff05fc6dcf983c541ded0ef337}\index{Vetana::Ventana@{Vetana::Ventana}!VentanaRestaurar@{VentanaRestaurar}}
+\index{VentanaRestaurar@{VentanaRestaurar}!Vetana::Ventana@{Vetana::Ventana}}
+\doxysubsubsection{\texorpdfstring{VentanaRestaurar()}{VentanaRestaurar()}}
+{\footnotesize\ttfamily \label{class_vetana_1_1_ventana_a9e46ceff05fc6dcf983c541ded0ef337} 
+bool Vetana\+::\+Ventana\+::\+Ventana\+Restaurar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Restaura la ventana a su estado normal si está minimizada o maximizada. \begin{DoxyReturn}{Returns}
+Verdadero si fue restaurada, falso en caso contrario. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Mov/Movment.\+hpp\end{DoxyCompactItemize}

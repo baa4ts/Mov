@@ -1,0 +1,57 @@
+\doxysection{Algoritmos\+::Algoritmo\+AEstrella Class Reference}
+\hypertarget{class_algoritmos_1_1_algoritmo_a_estrella}{}\label{class_algoritmos_1_1_algoritmo_a_estrella}\index{Algoritmos::AlgoritmoAEstrella@{Algoritmos::AlgoritmoAEstrella}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_algoritmos_1_1_algoritmo_a_estrella_a2f13c005a8062512bad51d7148db5f4f}{Generar\+Ruta}} (int InicioX, int InicioY, int FinalX, int FinalY)
+\item 
+static int \mbox{\hyperlink{class_algoritmos_1_1_algoritmo_a_estrella_a2d201ee1a52fabafd8643b677d23e7e4}{Heuristica}} (int x1, int y1, int x2, int y2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_algoritmos_1_1_algoritmo_a_estrella_a2f13c005a8062512bad51d7148db5f4f}\index{Algoritmos::AlgoritmoAEstrella@{Algoritmos::AlgoritmoAEstrella}!GenerarRuta@{GenerarRuta}}
+\index{GenerarRuta@{GenerarRuta}!Algoritmos::AlgoritmoAEstrella@{Algoritmos::AlgoritmoAEstrella}}
+\doxysubsubsection{\texorpdfstring{GenerarRuta()}{GenerarRuta()}}
+{\footnotesize\ttfamily \label{class_algoritmos_1_1_algoritmo_a_estrella_a2f13c005a8062512bad51d7148db5f4f} 
+static std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ Algoritmos\+::\+Algoritmo\+AEstrella\+::\+Generar\+Ruta (\begin{DoxyParamCaption}\item[{int}]{InicioX}{, }\item[{int}]{InicioY}{, }\item[{int}]{FinalX}{, }\item[{int}]{FinalY}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Genera una ruta desde el punto (InicioX, InicioY) hasta (FinalX, FinalY) utilizando el algoritmo A\texorpdfstring{$\ast$}{*}. 
+\begin{DoxyParams}{Parameters}
+{\em InicioX} & Coordenada X de inicio. \\
+\hline
+{\em InicioY} & Coordenada Y de inicio. \\
+\hline
+{\em FinalX} & Coordenada X de destino. \\
+\hline
+{\em FinalY} & Coordenada Y de destino. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector de pares de coordenadas que representan la ruta calculada. 
+\end{DoxyReturn}
+\Hypertarget{class_algoritmos_1_1_algoritmo_a_estrella_a2d201ee1a52fabafd8643b677d23e7e4}\index{Algoritmos::AlgoritmoAEstrella@{Algoritmos::AlgoritmoAEstrella}!Heuristica@{Heuristica}}
+\index{Heuristica@{Heuristica}!Algoritmos::AlgoritmoAEstrella@{Algoritmos::AlgoritmoAEstrella}}
+\doxysubsubsection{\texorpdfstring{Heuristica()}{Heuristica()}}
+{\footnotesize\ttfamily \label{class_algoritmos_1_1_algoritmo_a_estrella_a2d201ee1a52fabafd8643b677d23e7e4} 
+static int Algoritmos\+::\+Algoritmo\+AEstrella\+::\+Heuristica (\begin{DoxyParamCaption}\item[{int}]{x1}{, }\item[{int}]{y1}{, }\item[{int}]{x2}{, }\item[{int}]{y2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Calcula la heurística Manhattan entre dos puntos. 
+\begin{DoxyParams}{Parameters}
+{\em x1} & Coordenada X del primer punto. \\
+\hline
+{\em y1} & Coordenada Y del primer punto. \\
+\hline
+{\em x2} & Coordenada X del segundo punto. \\
+\hline
+{\em y2} & Coordenada Y del segundo punto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distancia heurística. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Mov/Movment.\+hpp\end{DoxyCompactItemize}

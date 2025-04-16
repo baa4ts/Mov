@@ -1,0 +1,56 @@
+\doxysection{Maus\+::Mouse Class Reference}
+\hypertarget{class_maus_1_1_mouse}{}\label{class_maus_1_1_mouse}\index{Maus::Mouse@{Maus::Mouse}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::tuple$<$ int, int $>$ \mbox{\hyperlink{class_maus_1_1_mouse_a4d7682796a7b6aa33604a18d81fc6a2a}{Posicion\+Actual\+Cursor}} ()
+\item 
+std\+::tuple$<$ int, int $>$ \mbox{\hyperlink{class_maus_1_1_mouse_a7697f59a2b876b8ef5d02290bbe298b2}{Posicion\+Aleatoria\+Pantalla}} ()
+\item 
+\Hypertarget{class_maus_1_1_mouse_a389608a2068ccd04d4bd3b9e3e1950bd}\label{class_maus_1_1_mouse_a389608a2068ccd04d4bd3b9e3e1950bd} 
+void {\bfseries Mover\+Aleatoriamente\+Cursor} ()
+\begin{DoxyCompactList}\small\item\em Mueve el cursor del ratón desde su posición actual a una aleatoria siguiendo una ruta tipo A\texorpdfstring{$\ast$}{*}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_maus_1_1_mouse_a19b9821d6f28bf2e4b6235959c7a0bb9}{Mover\+Cursor}} (int X, int Y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_maus_1_1_mouse_a19b9821d6f28bf2e4b6235959c7a0bb9}\index{Maus::Mouse@{Maus::Mouse}!MoverCursor@{MoverCursor}}
+\index{MoverCursor@{MoverCursor}!Maus::Mouse@{Maus::Mouse}}
+\doxysubsubsection{\texorpdfstring{MoverCursor()}{MoverCursor()}}
+{\footnotesize\ttfamily \label{class_maus_1_1_mouse_a19b9821d6f28bf2e4b6235959c7a0bb9} 
+bool Maus\+::\+Mouse\+::\+Mover\+Cursor (\begin{DoxyParamCaption}\item[{int}]{X}{, }\item[{int}]{Y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Mueve el cursor del ratón a una posición específica dentro de los límites de la pantalla. 
+\begin{DoxyParams}{Parameters}
+{\em X} & Coordenada X de destino. \\
+\hline
+{\em Y} & Coordenada Y de destino. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadero si el movimiento fue exitoso. 
+\end{DoxyReturn}
+\Hypertarget{class_maus_1_1_mouse_a4d7682796a7b6aa33604a18d81fc6a2a}\index{Maus::Mouse@{Maus::Mouse}!PosicionActualCursor@{PosicionActualCursor}}
+\index{PosicionActualCursor@{PosicionActualCursor}!Maus::Mouse@{Maus::Mouse}}
+\doxysubsubsection{\texorpdfstring{PosicionActualCursor()}{PosicionActualCursor()}}
+{\footnotesize\ttfamily \label{class_maus_1_1_mouse_a4d7682796a7b6aa33604a18d81fc6a2a} 
+std\+::tuple$<$ int, int $>$ Maus\+::\+Mouse\+::\+Posicion\+Actual\+Cursor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Obtiene la posición actual del cursor. \begin{DoxyReturn}{Returns}
+Tupla (X, Y) con la posición actual o (-\/1, -\/1) si falla. 
+\end{DoxyReturn}
+\Hypertarget{class_maus_1_1_mouse_a7697f59a2b876b8ef5d02290bbe298b2}\index{Maus::Mouse@{Maus::Mouse}!PosicionAleatoriaPantalla@{PosicionAleatoriaPantalla}}
+\index{PosicionAleatoriaPantalla@{PosicionAleatoriaPantalla}!Maus::Mouse@{Maus::Mouse}}
+\doxysubsubsection{\texorpdfstring{PosicionAleatoriaPantalla()}{PosicionAleatoriaPantalla()}}
+{\footnotesize\ttfamily \label{class_maus_1_1_mouse_a7697f59a2b876b8ef5d02290bbe298b2} 
+std\+::tuple$<$ int, int $>$ Maus\+::\+Mouse\+::\+Posicion\+Aleatoria\+Pantalla (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Genera una posición aleatoria dentro de la pantalla. \begin{DoxyReturn}{Returns}
+Tupla (X, Y) con una posición aleatoria. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Mov/Movment.\+hpp\end{DoxyCompactItemize}
